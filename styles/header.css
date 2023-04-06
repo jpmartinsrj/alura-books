@@ -1,0 +1,64 @@
+.cabecalho__menu-hamburguer{
+    width: 24px; /*largura*/
+    height: 24px; /*Altura*/
+    background-image: url("../img/Menu.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+    padding: 1em;
+}
+
+.cabecalho{
+    background-color: var(--branco);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative; /*Libera a opção de colocar outros atributos*/
+}
+
+.container{
+    display: flex;
+    align-items: center;
+}
+
+.container__imagem{
+    padding: 1em;
+}
+
+.lista-menu{
+    display: none; /*desaparece com o elemento e não ocupa espaço nenhum*/
+    position: absolute; /*Permite que movimente o elemento de acordo com outro que veio antes (pai) que teve a posição diferente de estática*/
+    top: 100%; /*Retira 100% do cabeçalho e ficou para baixo*/
+    width: 70vw; /*Aumentar a largura*/
+}
+
+.container__botao:checked~.lista-menu{ /*Como se fosse uma condicional*/ 
+    /*detecta se está preenchido o checkbox*/ /* "~" é um combinador*/
+    display: block;
+}
+
+.lista-menu__titulo, .lista-menu__item{
+    padding: 1em;
+    background-color: var(--branco);
+}
+
+.lista-menu__titulo{
+    color: var(--laranja);
+    font-weight: 700;
+}
+
+.lista-menu__link{
+    background: var(--azul-degrade);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase; /*Colocar em letra maiúscula*/
+}
+
+.container__botao{
+    display: none;
+}
+
+@media screen and (min-width: 1024px){
+    
+}
